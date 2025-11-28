@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87CEEB; /* Sky blue fallback */
+    font-family: monospace;
+    touch-action: none; /* Prevents pull-to-refresh on mobile */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+}
+
+#crosshair {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin-left: -10px;
+    margin-top: -10px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    pointer-events: none;
+    text-shadow: 1px 1px 0 #000;
+    z-index: 10;
+}
+
+#info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 5px;
+    pointer-events: none;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let touches pass through where buttons aren't */
+}
+
+.top-bar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    pointer-events: auto;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    color: white;
+    padding: 8px 12px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+button:active {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#inventory-panel {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 60px;
+    background: rgba(0,0,0,0.8);
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.block-select {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #555;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.block-select.active {
+    border-color: yellow;
+}
+
+/* Touch Controls */
+.controls-area {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+
+#zone-move {
+    width: 50%;
+    height: 100%;
+    pointer-events: auto;
+    /* background: rgba(255, 0, 0, 0.1); Debug: see zone */
+}
+
+#zone-look {
+    width: 50%;
+    height: 100%;
+    pointer-events: auto;
+    /* background: rgba(0, 0, 255, 0.1); Debug: see zone */
+}
+
+#btn-jump {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: 3px solid white;
+    pointer-events: auto;
+    font-size: 16px;
+}
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>OpenWorld Mobile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Crosshair -->
+    <div id="crosshair">+</div>
+
+    <!-- Debug / Info -->
+    <div id="info">OpenWorld JS</div>
+
+    <!-- UI Overlay -->
+    <div id="ui-layer">
+        <div class="top-bar">
+            <button id="btn-save">Save</button>
+            <button id="btn-load">Load</button>
+            <button id="btn-inv">INV</button>
+        </div>
+
+        <div id="inventory-panel" style="display:none;">
+            <div class="block-select" data-id="1" style="background:green;">Grass</div>
+            <div class="block-select" data-id="2" style="background:#5d4037;">Dirt</div>
+            <div class="block-select" data-id="3" style="background:grey;">Stone</div>
+            <div class="block-select" data-id="4" style="background:#ffd54f;">Sand</div>
+            <div class="block-select" data-id="5" style="background:#795548;">Wood</div>
+            <div class="block-select" data-id="6" style="background:red;">Brick</div>
+        </div>
+
+        <div class="controls-area">
+            <!-- Left Touch Zone (Move) -->
+            <div id="zone-move"></div>
+            <!-- Right Touch Zone (Look + Action) -->
+            <div id="zone-look"></div>
+        </div>
+
+        <button id="btn-jump">JUMP</button>
+    </div>
+
+    <!-- Game Engine -->
+    <script type="module" src="main.js"></script>
+</body>
+</html>
